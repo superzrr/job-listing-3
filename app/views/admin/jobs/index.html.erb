@@ -23,6 +23,11 @@
       <td>
         <%= link_to "编辑", edit_admin_job_path(f) %>
         <%= link_to "删除", admin_job_path(f), method: :delete, :data=> {:confirm => "确定删除吗" } %>
+        <% if f.is_hidden %>
+          <%= link_to "公开", publish_admin_job_path(f), method: :post, :class=>"btn btn-xs btn-default" %>
+        <% else %>
+          <%= link_to "隐藏", hide_admin_job_path(f), method: :post, :class => "btn btn-xs btn-default" %>
+        <% end %>
       </td>
       <td><%= f.created_at %></td>
     </tr>

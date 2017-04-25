@@ -1,9 +1,9 @@
 module Admin::JobsHelper
   def render_job_status(job)
     if job.is_hidden
-      "(Hidden)"
+      awesome("lock")
     else
-      "(Published)"
+      awesome("globe")
     end
   end
 end
