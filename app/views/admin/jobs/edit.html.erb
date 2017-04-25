@@ -1,0 +1,9 @@
+<h1>
+  <%= @job.title %>
+</h1>
+
+<%= simple_form_for [:admin, @job] do |f| %>
+  <%= f.input :f.title %>
+  <%= f.input :f.description %>
+  <%= f.submit "更新" %>
+<% end %>

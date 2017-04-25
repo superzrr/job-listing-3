@@ -1,0 +1,6 @@
+<h1>增加职缺</h1>
+<%= simple_form_for [:admin, @job] do |f| %>
+<%= f.input :title %>
+<%= f.input :description %>
+<%= f.submit "保存" %>
+<% end %>
