@@ -8,6 +8,7 @@
   <thead>
     <tr>
       <th>职缺名称</th>
+      <th>简历数</th>
       <th>管理</th>
       <th>发布时间</th>
     </tr>
@@ -20,6 +21,7 @@
         <%= render_job_status(f) %>
         <%= link_to f.title, admin_job_path(f) %>
       </td>
+      <td><%= link_to f.resumes.count, admin_job_resumes_path(f) %></td>
       <td>
         <%= link_to "编辑", edit_admin_job_path(f) %>
         <%= link_to "删除", admin_job_path(f), method: :delete, :data=> {:confirm => "确定删除吗" } %>
