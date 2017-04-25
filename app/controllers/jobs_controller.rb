@@ -1,7 +1,7 @@
 class JobsController < ApplicationController
 
   def index
-    @jobs = Job.all.recent
+    @jobs = Job.published.recent
   end
 
   def show
