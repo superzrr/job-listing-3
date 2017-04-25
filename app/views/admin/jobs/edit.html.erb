@@ -3,7 +3,10 @@
 </h1>
 
 <%= simple_form_for [:admin, @job] do |f| %>
-  <%= f.input :f.title %>
-  <%= f.input :f.description %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.input :wage_lower_bound %>
+  <%= f.input :wage_upper_bound %>
+  <%= f.input :contact_email %>
   <%= f.submit "更新" %>
 <% end %>

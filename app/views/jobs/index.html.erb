@@ -14,12 +14,14 @@
       <thead>
         <tr>
           <th>职位名称</th>
+          <th>薪资范围</th>
           <th>发布时间</th>
         </tr>
       </thead>
       <% @jobs.each do |f|%>
       <tr>
         <td><%= link_to f.title, job_path(f) %></td>
+        <td class="text-success" style="font-size:16px"><%= f.wage_lower_bound/1000 %>k-<%= f.wage_upper_bound/1000 %>k</td>
         <td><%= f.created_at %></td>
       </tr>
       <% end %>
