@@ -1,2 +1,6 @@
 <h2><%= @job.title %></h2>
 <%= simple_format(@job.description)%>
+
+<div class="text-center">
+  <%= link_to"我要应聘",new_job_resume_path(@job) %>
+</div>
