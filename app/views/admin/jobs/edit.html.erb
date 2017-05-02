@@ -4,6 +4,7 @@
 
 <%= simple_form_for [:admin, @job] do |f| %>
   <%= f.input :title %>
+  <%= f.input :job_field %>
   <%= f.input :description %>
   <%= f.input :wage_lower_bound %>
   <%= f.input :wage_upper_bound %>
