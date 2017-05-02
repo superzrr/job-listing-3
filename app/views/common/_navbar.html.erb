@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top"  role="navigation">
   <div class="container-fluid">
     <!-- brand and toggle are grouped for better mobile display  -->
     <div class="navbar-header">
@@ -7,12 +7,13 @@
        <span class="icon-bar"></span>
        <span class="icon-bar"></span>
      </button>
-      <a href="/" class="navbar-brand">桥新建•筑</a>
+      <a href="/" class="navbar-brand">QX建•筑</a>
     </div>
 
     <!-- Collect the nav links forms and other content for toggling  -->
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
+          <li><a href="http://localhost:3000#about">ABOUT</a></li>
           <% if !current_user %>
           <li><a href="#" data-toggle="modal" data-target="#signup-modal"><%=awesome("user") %>注册</a></li>
           <li><a href="#" data-toggle="modal" data-target="#login-modal"><%=awesome("sign-in") %>登入</a></li>
@@ -37,6 +38,7 @@
   <!-- /.container-fluid -->
 
 </nav>
+
 <!-- 以下代码添加在最后 -->
 <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
   <div class="modal-dialog" role="document">

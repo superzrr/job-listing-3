@@ -9,11 +9,11 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
+// --add by sueprzrr
+//  if require bootstrap-min.js and bootstrap.js ,then the popup window will have problem.
 //
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
-//= require bootstrap.min
-//= require bootstrap
 //= require_tree .

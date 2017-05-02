@@ -3,19 +3,54 @@
   <head>
     <title>JobListing</title>
     <%= csrf_meta_tags %>
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=HrAKjGITzmSpnP1Rk5247TPTr2H8L3gV"></script>
+
+    <style>
+
+    .carousel-inner {
+      margin-bottom: 50px;
+    }
+
+    .carousel-inner img {
+        -webkit-filter: grayscale(90%);
+        filter: grayscale(90%); /* make all photos black and white */
+        width: 100%; /* Set width to 100% */
+        margin:auto;
+    }
+
+    .carousel-caption h3 {
+        color: #fff !important;
+    }
+
+    .logo {
+      color: #f4511e;
+      font-size: 200px;
+    }
+
+    .bg-grey {
+      background-color: #f6f6f6;
+    }
+
+    </style>
 
   </head>
-
   <body>
     <div class="container-fluid">
-      <%= render "common/flashes" %>
-      <div class="row">
-        <%= render "common/navbar" %>
-        <%= yield %>
-      </div>
+        <%= render "common/flashes" %>
+        <div class="row">
+          <%= render "common/navbar" %>
+        </div>
+        <div class="row" style="margin-top:60px;">
+          <%= yield %>
+        </div>
     </div>
-  <%= render "common/footer" %>
+    <%= render "common/footer" %>
+
   </body>
 </html>
